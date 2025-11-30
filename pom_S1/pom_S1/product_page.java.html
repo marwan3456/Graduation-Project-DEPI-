@@ -1,0 +1,120 @@
+<html>
+<head>
+<title>product_page.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cf8e6d;}
+.s1 { color: #bcbec4;}
+.s2 { color: #bcbec4;}
+.s3 { color: #6aab73;}
+</style>
+</head>
+<body bgcolor="#191a1c">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+product_page.java</font>
+</center></td></tr></table>
+<pre><span class="s0">import </span><span class="s1">org</span><span class="s2">.</span><span class="s1">openqa</span><span class="s2">.</span><span class="s1">selenium</span><span class="s2">.</span><span class="s1">By</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">org</span><span class="s2">.</span><span class="s1">openqa</span><span class="s2">.</span><span class="s1">selenium</span><span class="s2">.</span><span class="s1">WebDriver</span><span class="s2">;</span>
+
+<span class="s0">public class </span><span class="s1">product_page </span><span class="s0">extends  </span><span class="s1">Page_Base</span><span class="s2">{</span>
+    <span class="s1">By sreachdress </span><span class="s2">=</span><span class="s1">By</span><span class="s2">.</span><span class="s1">cssSelector</span><span class="s2">(</span><span class="s3">&quot;a[href='/category_products/1']&quot;</span><span class="s2">);</span>
+    <span class="s1">By productbutton </span><span class="s2">= </span><span class="s1">By</span><span class="s2">.</span><span class="s1">className</span><span class="s2">(</span><span class="s3">&quot;material-icons&quot;</span><span class="s2">);</span>
+    <span class="s1">By plusbuttonwomen </span><span class="s2">= </span><span class="s1">By</span><span class="s2">.</span><span class="s1">cssSelector</span><span class="s2">(</span><span class="s3">&quot;.panel-title a[data-toggle='collapse']&quot;</span><span class="s2">);</span>
+    <span class="s1">By Entersearch </span><span class="s2">= </span><span class="s1">By</span><span class="s2">.</span><span class="s1">className</span><span class="s2">(</span><span class="s3">&quot;input-lg&quot;</span><span class="s2">);</span>
+    <span class="s1">By searchbutton </span><span class="s2">= </span><span class="s1">By</span><span class="s2">.</span><span class="s1">className</span><span class="s2">(</span><span class="s3">&quot;fa-search&quot;</span><span class="s2">);</span>
+    <span class="s1">By filtertops </span><span class="s2">= </span><span class="s1">By</span><span class="s2">.</span><span class="s1">cssSelector</span><span class="s2">(</span><span class="s3">&quot;a[href='/category_products/2']&quot;</span><span class="s2">);</span>
+    <span class="s1">By filtersaree </span><span class="s2">= </span><span class="s1">By</span><span class="s2">.</span><span class="s1">cssSelector</span><span class="s2">(</span><span class="s3">&quot;a[href='/category_products/7']&quot;</span><span class="s2">);</span>
+    <span class="s1">By filtershirts </span><span class="s2">= </span><span class="s1">By</span><span class="s2">.</span><span class="s1">cssSelector</span><span class="s2">(</span><span class="s3">&quot;a[href='/category_products/3']&quot;</span><span class="s2">) ;</span>
+    <span class="s1">By  plusbuttonmen </span><span class="s2">= </span><span class="s1">By</span><span class="s2">.</span><span class="s1">cssSelector</span><span class="s2">(</span><span class="s3">&quot;a[href='#Men'] .fa-plus&quot;</span><span class="s2">) ;</span>
+    <span class="s1">By filterjeans </span><span class="s2">= </span><span class="s1">By</span><span class="s2">.</span><span class="s1">cssSelector</span><span class="s2">(</span><span class="s3">&quot;a[href='/category_products/6']&quot;</span><span class="s2">) ;</span>
+    <span class="s1">By Plusbuttonkids </span><span class="s2">= </span><span class="s1">By</span><span class="s2">.</span><span class="s1">cssSelector</span><span class="s2">(</span><span class="s3">&quot;a[href='#Kids'] .fa-plus&quot;</span><span class="s2">) ;</span>
+    <span class="s1">By fiterkiddress </span><span class="s2">= </span><span class="s1">By</span><span class="s2">.</span><span class="s1">cssSelector</span><span class="s2">(</span><span class="s3">&quot;a[href='/category_products/4']&quot;</span><span class="s2">) ;</span>
+    <span class="s1">By Tops_Shirts </span><span class="s2">= </span><span class="s1">By</span><span class="s2">.</span><span class="s1">cssSelector</span><span class="s2">(</span><span class="s3">&quot;a[href='/category_products/5']&quot;</span><span class="s2">);</span>
+    <span class="s1">By addtocart </span><span class="s2">=</span><span class="s1">By</span><span class="s2">.</span><span class="s1">xpath</span><span class="s2">( </span><span class="s3">&quot;//a[@ data-product-id='4'and @class='btn btn-default add-to-cart']&quot;</span><span class="s2">) ;</span>
+    <span class="s1">By veiw </span><span class="s2">= </span><span class="s1">By</span><span class="s2">.</span><span class="s1">cssSelector</span><span class="s2">(</span><span class="s3">&quot;a[href='/product_details/3']&quot;</span><span class="s2">) ;</span>
+
+    <span class="s0">public </span><span class="s1">product_page</span><span class="s2">(</span><span class="s1">WebDriver driver</span><span class="s2">){</span>
+          <span class="s0">super</span><span class="s2">(</span><span class="s1">driver</span><span class="s2">);</span>
+      <span class="s2">}</span>
+      <span class="s0">public void </span><span class="s1">clickondressfilter</span><span class="s2">(){</span>
+     <span class="s1">Click_On_button</span><span class="s2">(</span><span class="s1">sreachdress</span><span class="s2">) ;</span>
+      <span class="s2">}</span>
+    <span class="s0">public void </span><span class="s1">clickonproductbutton</span><span class="s2">(){</span>
+        <span class="s1">Click_On_button</span><span class="s2">(</span><span class="s1">productbutton</span><span class="s2">);</span>
+    <span class="s2">}</span>
+    <span class="s0">public void </span><span class="s1">clickonplusbutton</span><span class="s2">(){</span>
+        <span class="s1">Click_On_button</span><span class="s2">(</span><span class="s1">plusbuttonwomen</span><span class="s2">);</span>
+    <span class="s2">}</span>
+    <span class="s0">public void </span><span class="s1">Entersearch</span><span class="s2">(){</span>
+        <span class="s1">Enter_text</span><span class="s2">(</span><span class="s1">Entersearch </span><span class="s2">, </span><span class="s3">&quot;Dress&quot;</span><span class="s2">);</span>
+    <span class="s2">}</span>
+    <span class="s0">public void </span><span class="s1">clickonsearchbutton</span><span class="s2">(){</span>
+        <span class="s1">Click_On_button</span><span class="s2">(</span><span class="s1">searchbutton</span><span class="s2">);</span>
+    <span class="s2">}</span>
+    <span class="s0">public void </span><span class="s1">Entersearchinvalid</span><span class="s2">(){</span>
+        <span class="s1">Enter_text</span><span class="s2">(</span><span class="s1">Entersearch </span><span class="s2">, </span><span class="s3">&quot;space rocket&quot;</span><span class="s2">);</span>
+    <span class="s2">}</span>
+    <span class="s0">public void </span><span class="s1">upperlatter</span><span class="s2">(){</span>
+        <span class="s1">Enter_text</span><span class="s2">(</span><span class="s1">Entersearch </span><span class="s2">, </span><span class="s3">&quot;DRESS &quot;</span><span class="s2">);</span>
+    <span class="s2">}</span>
+    <span class="s0">public void </span><span class="s1">halfword</span><span class="s2">(){</span>
+        <span class="s1">Enter_text</span><span class="s2">(</span><span class="s1">Entersearch </span><span class="s2">, </span><span class="s3">&quot;dre &quot;</span><span class="s2">);</span>
+    <span class="s2">}</span>
+    <span class="s0">public void </span><span class="s1">spechial</span><span class="s2">(){</span>
+        <span class="s1">Enter_text</span><span class="s2">(</span><span class="s1">Entersearch </span><span class="s2">, </span><span class="s3">&quot;@#@#$$$@ &quot;</span><span class="s2">);</span>
+    <span class="s2">}</span>
+    <span class="s0">public void </span><span class="s1">numbers</span><span class="s2">(){</span>
+        <span class="s1">Enter_text</span><span class="s2">(</span><span class="s1">Entersearch </span><span class="s2">, </span><span class="s3">&quot;697869 &quot;</span><span class="s2">);</span>
+    <span class="s2">}</span>
+    <span class="s0">public void </span><span class="s1">tops</span><span class="s2">(){</span>
+        <span class="s1">Click_On_button</span><span class="s2">(</span><span class="s1">filtertops</span><span class="s2">);</span>
+    <span class="s2">}</span>
+    <span class="s0">public void </span><span class="s1">saree</span><span class="s2">(){</span>
+        <span class="s1">Click_On_button</span><span class="s2">(</span><span class="s1">filtersaree</span><span class="s2">);</span>
+    <span class="s2">}</span>
+    <span class="s0">public void </span><span class="s1">plusbuttonmen1</span><span class="s2">(){</span>
+        <span class="s1">Click_On_button</span><span class="s2">(</span><span class="s1">plusbuttonmen</span><span class="s2">);</span>
+    <span class="s2">}</span>
+    <span class="s0">public void </span><span class="s1">shirts</span><span class="s2">(){</span>
+        <span class="s1">Click_On_button</span><span class="s2">(</span><span class="s1">filtershirts</span><span class="s2">);</span>
+    <span class="s2">}</span>
+    <span class="s0">public void </span><span class="s1">jeans</span><span class="s2">(){</span>
+        <span class="s1">Click_On_button</span><span class="s2">(</span><span class="s1">filterjeans</span><span class="s2">);</span>
+    <span class="s2">}</span>
+    <span class="s0">public void </span><span class="s1">plusbuttonkids1</span><span class="s2">(){</span>
+        <span class="s1">Click_On_button</span><span class="s2">(</span><span class="s1">Plusbuttonkids</span><span class="s2">);</span>
+    <span class="s2">}</span>
+    <span class="s0">public void </span><span class="s1">kidsdress</span><span class="s2">(){</span>
+        <span class="s1">Click_On_button</span><span class="s2">(</span><span class="s1">fiterkiddress</span><span class="s2">);</span>
+    <span class="s2">}</span>
+    <span class="s0">public void </span><span class="s1">TopsAndShirts</span><span class="s2">(){</span>
+        <span class="s1">Click_On_button</span><span class="s2">(</span><span class="s1">Tops_Shirts</span><span class="s2">);</span>
+    <span class="s2">}</span>
+    <span class="s0">public void </span><span class="s1">Addtocart</span><span class="s2">(){</span>
+        <span class="s1">Click_On_button</span><span class="s2">(</span><span class="s1">addtocart</span><span class="s2">);</span>
+    <span class="s2">}</span>
+    <span class="s0">public void </span><span class="s1">viewproduct</span><span class="s2">(){</span>
+        <span class="s1">Click_On_button</span><span class="s2">(</span><span class="s1">veiw</span><span class="s2">);</span>
+    <span class="s2">}</span>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<span class="s2">}</span>
+
+</pre>
+</body>
+</html>
